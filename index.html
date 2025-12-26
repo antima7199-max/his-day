@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aadi 🎂</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+/* ---------- COMMON SECTION STYLE ---------- */
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  color:white;
+}
+
+/* ---------- BACKGROUND LAYERS ---------- */
+.layer1{
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4);
+}
+
+.layer2{
+  background:linear-gradient(135deg,#a18cd1,#fbc2eb);
+}
+
+.layer3{
+  background:linear-gradient(135deg,#43cea2,#185a9d);
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade{
+  animation:fadeIn 2s ease forwards;
+}
+
+.slide{
+  animation:slideUp 2s ease forwards;
+}
+
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes slideUp{
+  from{transform:translateY(50px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
+}
+
+/* ---------- TEXT ---------- */
+h1{
+  font-size:3rem;
+  margin-bottom:15px;
+}
+
+p{
+  font-size:1.3rem;
+  max-width:600px;
+  margin:10px 0;
+}
+
+/* ---------- BUTTON ---------- */
+button{
+  margin-top:25px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:white;
+  color:#ff4081;
+  font-size:1.1rem;
+  cursor:pointer;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.05);}
+  100%{transform:scale(1);}
+}
+
+/* ---------- IMAGE ---------- */
+img{
+  width:260px;
+  height:260px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  margin:20px 0;
+}
+
+/* ---------- HEART FLOAT ---------- */
+.heart{
+  position:fixed;
+  color:rgba(255,255,255,0.6);
+  font-size:20px;
+  animation:float 6s linear infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(100vh);}
+  100%{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 BACKGROUND MUSIC -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ❤️ HEARTS -->
+<script>
+for(let i=0;i<20;i++){
+  let heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="❤";
+  heart.style.left=Math.random()*100+"vw";
+  heart.style.animationDuration=(Math.random()*3+4)+"s";
+  document.body.appendChild(heart);
+}
+</script>
+
+<!-- 🎉 PAGE 1 -->
+<section class="layer1">
+  <h1 class="fade">🎂 Happy Birthday 🎂</h1>
+  <h1 class="slide">Chotu Aadi ❤️</h1>
+
+  <p class="fade">
+    Today is not just your birthday,<br>
+    it’s the day the world got more beautiful 🌍✨
+  </p>
+
+  <button onclick="document.getElementById('page2').scrollIntoView()">
+    See Something Special 💝
+  </button>
+</section>
+
+<!-- 📸 PAGE 2 -->
+<section class="layer2" id="page2">
+  <img src="aadi.jpg" alt="Aadi Photo" class="fade">
+
+  <h1 class="slide">My Favorite Person 💕</h1>
+
+  <p class="fade">
+    You make every ordinary moment magical ✨<br>
+    Your smile is my favorite view 😍<br>
+    And your presence makes my world complete 💖
+  </p>
+
+  <button onclick="document.getElementById('page3').scrollIntoView()">
+    Final Surprise 🎁
+  </button>
+</section>
+
+<!-- 🎁 PAGE 3 -->
+<section class="layer3" id="page3">
+  <h1 class="fade">🎉 Surprise 🎉</h1>
+
+  <p class="slide">
+    No gift can match your value 💎<br>
+    But this little website carries my heart ❤️<br>
+    I promise to celebrate you not just today,<br>
+    but every single day 🫶
+  </p>
+
+  <h1 class="fade">I Love You, Aadi 💘</h1>
+</section>
+
+</body>
+</html>
+
